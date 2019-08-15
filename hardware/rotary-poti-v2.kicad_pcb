@@ -6229,6 +6229,16 @@
     (pad "" thru_hole circle (at 3.74904 5.4991 90) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.Mask F.SilkS))
     (pad "" thru_hole oval (at 5.79882 -6.10108 90) (size 3.50012 4.50088) (drill oval 1.99898 2.49936) (layers *.Cu *.Mask F.SilkS))
     (pad "" thru_hole oval (at -5.79882 -6.10108 90) (size 3.50012 4.50088) (drill oval 1.99898 2.49936) (layers *.Cu *.Mask F.SilkS))
+    (model rotary_poti.step
+      (offset (xyz 0 4.6 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model rotary_poti_knob.step
+      (offset (xyz 0 6.1 8.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module kicad-libraries:QFN24-4x4mm-0.5mm (layer Vorderseite) (tedit 5D0241AC) (tstamp 5B2CFE06)
