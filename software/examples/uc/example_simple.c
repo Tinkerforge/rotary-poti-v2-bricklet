@@ -11,13 +11,11 @@ void example_setup(TF_HalContext *hal) {
 	// Create device object
 	check(tf_rotary_poti_v2_create(&rp, UID, hal), "create device object");
 
-
 	// Get current position
 	int16_t position;
 	check(tf_rotary_poti_v2_get_position(&rp, &position), "get position");
 
 	tf_hal_printf("Position: %d °\n", position);
-
 }
 
 void example_loop(TF_HalContext *hal) {
