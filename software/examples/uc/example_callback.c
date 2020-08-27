@@ -5,14 +5,18 @@
 
 void check(int rc, const char* msg);
 
+void example_setup(TF_HalContext *hal);
+void example_loop(TF_HalContext *hal);
+
+
 // Callback function for position callback
-void position_handler(TF_RotaryPotiV2 *device, int16_t position, void *user_data) {
+static void position_handler(TF_RotaryPotiV2 *device, int16_t position, void *user_data) {
 	(void)device; (void)user_data; // avoid unused parameter warning
 
 	tf_hal_printf("Position: %d °\n", position);
 }
 
-TF_RotaryPotiV2 rp;
+static TF_RotaryPotiV2 rp;
 
 void example_setup(TF_HalContext *hal) {
 	// Create device object
