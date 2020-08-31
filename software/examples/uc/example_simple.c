@@ -19,7 +19,7 @@ void example_setup(TF_HalContext *hal) {
 	int16_t position;
 	check(tf_rotary_poti_v2_get_position(&rp, &position), "get position");
 
-	tf_hal_printf("Position: %d °\n", position);
+	tf_hal_printf("Position: %I16d °\n", position);
 }
 
 void example_loop(TF_HalContext *hal) {

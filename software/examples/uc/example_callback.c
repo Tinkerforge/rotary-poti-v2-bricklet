@@ -13,7 +13,7 @@ void example_loop(TF_HalContext *hal);
 static void position_handler(TF_RotaryPotiV2 *device, int16_t position, void *user_data) {
 	(void)device; (void)user_data; // avoid unused parameter warning
 
-	tf_hal_printf("Position: %d °\n", position);
+	tf_hal_printf("Position: %I16d °\n", position);
 }
 
 static TF_RotaryPotiV2 rp;
