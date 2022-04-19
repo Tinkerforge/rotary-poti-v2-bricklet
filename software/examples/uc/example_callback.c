@@ -9,8 +9,8 @@
 
 void check(int rc, const char* msg);
 
-void example_setup(TF_HalContext *hal);
-void example_loop(TF_HalContext *hal);
+void example_setup(TF_HAL *hal);
+void example_loop(TF_HAL *hal);
 
 
 // Callback function for position callback
@@ -22,7 +22,7 @@ static void position_handler(TF_RotaryPotiV2 *device, int16_t position, void *us
 
 static TF_RotaryPotiV2 rp;
 
-void example_setup(TF_HalContext *hal) {
+void example_setup(TF_HAL *hal) {
 	// Create device object
 	check(tf_rotary_poti_v2_create(&rp, UID, hal), "create device object");
 
@@ -35,7 +35,7 @@ void example_setup(TF_HalContext *hal) {
 	tf_rotary_poti_v2_set_position_callback_configuration(&rp, 250, false, 'x', 0, 0);
 }
 
-void example_loop(TF_HalContext *hal) {
+void example_loop(TF_HAL *hal) {
 	// Poll for callbacks
 	tf_hal_callback_tick(hal, 0);
 }
